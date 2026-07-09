@@ -87,9 +87,13 @@ export default function Hero() {
             <Mail size={18} />
             {t("hero.cta")}
           </a>
-          <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300">
+          <a
+            href="../cv.pdf"
+            download
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+          >
             {t("hero.resume")}
-          </button>
+          </a>
         </motion.div>
       </div>
 
