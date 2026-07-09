@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Full-Stack Developer",
+    "tagline": "I build scalable web applications with clean code & great user experiences",
+    "cta": "Get In Touch",
+    "resume": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Who I Am",
+    "p1": "I'm a passionate full-stack developer with expertise in building modern, scalable web applications. I specialize in JavaScript/TypeScript ecosystems, crafting seamless experiences from database to UI.",
+    "p2": "With a strong foundation in both frontend and backend technologies, I bring ideas to life through clean architecture, performant code, and thoughtful design. I'm constantly exploring new tools and patterns to deliver the best solutions.",
+    "p3": "When I'm not coding, you'll find me exploring open-source projects, contributing to developer communities, or experimenting with emerging technologies."
+  },
+  "skills": {
+    "title": "Skills & Tools",
+    "subtitle": "Technologies I Work With",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools & DevOps"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "What I've Built",
+    "viewProject": "View Project",
+    "viewCode": "Source Code",
+    "items": [
+      {
+        "title": "Project One",
+        "description": "A full-stack web application built with Next.js and Node.js featuring real-time updates and a modern UI.",
+        "tech": ["Next.js", "TypeScript", "PostgreSQL"]
+      },
+      {
+        "title": "Project Two",
+        "description": "An e-commerce platform with payment integration, inventory management, and responsive design.",
+        "tech": ["React", "Node.js", "MongoDB"]
+      },
+      {
+        "title": "Project Three",
+        "description": "A real-time collaboration tool with WebSocket support, authentication, and cloud storage.",
+        "tech": ["Next.js", "Socket.io", "AWS"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My Journey",
+    "items": [
+      {
+        "role": "Full-Stack Developer",
+        "company": "Current Position",
+        "period": "2024 — Present",
+        "description": "Building and maintaining scalable web applications, leading technical decisions, and mentoring junior developers."
+      },
+      {
+        "role": "Software Engineer",
+        "company": "Previous Company",
+        "period": "2022 — 2024",
+        "description": "Developed RESTful APIs and microservices, optimized database queries, and implemented CI/CD pipelines."
+      },
+      {
+        "role": "Junior Developer",
+        "company": "First Role",
+        "period": "2020 — 2022",
+        "description": "Built responsive UIs, wrote unit tests, and contributed to the development of internal tools."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's Work Together",
+    "description": "Have a project in mind or just want to say hello? I'd love to hear from you.",
+    "email": "Email",
+    "location": "Location",
+    "emailMe": "Send Email",
+    "social": "Social Links"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "madeWith": "Built with"
+  }
+}

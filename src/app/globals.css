@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+    --card: 255 255 255;
+    --card-border: 226 232 240;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+    --accent: 99 102 241;
+    --accent-hover: 79 70 229;
+    --gradient-from: 99 102 241;
+    --gradient-to: 139 92 246;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-arabic: 'Noto Kufi Arabic', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 2 6 23;
+    --foreground: 226 232 240;
+    --card: 15 23 42;
+    --card-border: 30 41 59;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+    --accent: 129 140 248;
+    --accent-hover: 165 180 252;
+    --gradient-from: 129 140 248;
+    --gradient-to: 167 139 250;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+  body {
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  html[dir="rtl"] body {
+    font-family: var(--font-arabic);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, rgb(var(--gradient-from)), rgb(var(--gradient-to)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glow-card {
+    transition: all 0.3s ease;
+  }
+  .glow-card:hover {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+  }
+
+  .gradient-bg {
+    background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.08), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.05), transparent 60%);
+  }
+
+  .dark .gradient-bg {
+    background: radial-gradient(ellipse at top, rgba(129, 140, 248, 0.06), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(167, 139, 250, 0.04), transparent 60%);
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-sm font-semibold uppercase tracking-widest text-primary-500 dark:text-primary-400;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mt-2;
+  }
+  .section-subtitle {
+    @apply text-slate-600 dark:text-slate-400 mt-4 max-w-2xl text-lg;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.3);
+}
