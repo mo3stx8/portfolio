@@ -8,15 +8,15 @@ export default function Contact() {
   const { t, dir } = useI18n();
 
   const socials = [
-    { icon: Github, href: "https://github.com/mostafa-ameen", label: "GitHub" },
+    { icon: Github, href: "https://github.com/mo3stx8", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/mostafa-ameen",
+      href: "https://linkedin.com/in/mostafa-al-zubairi",
       label: "LinkedIn",
     },
     {
       icon: Twitter,
-      href: "https://twitter.com/mostafa_ameen",
+      href: "https://twitter.com/mo3stx7",
       label: "Twitter",
     },
   ];
@@ -51,10 +51,10 @@ export default function Contact() {
                       {t("contact.email")}
                     </p>
                     <a
-                      href="mailto:mostafa@example.com"
+                      href="mailto:mostafasa7754@gmail.com"
                       className="text-slate-800 dark:text-slate-200 font-semibold hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
-                      mostafa@example.com
+                      mostafasa7754@gmail.com
                     </a>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                       {t("contact.location")}
                     </p>
                     <p className="text-slate-800 dark:text-slate-200 font-semibold">
-                      Egypt
+                      Yemen
                     </p>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function Contact() {
 
                 <div className="mt-6">
                   <a
-                    href="mailto:mostafa@example.com"
+                    href="mailto:mostafasa7754@gmail.com"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-600 dark:bg-primary-500 text-white font-semibold hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25"
                   >
                     <Mail size={18} />

@@ -21,7 +21,7 @@ export default function Footer() {
           <p className="text-sm text-slate-400 dark:text-slate-600 flex items-center gap-1.5">
             {t("footer.madeWith")}
             <Heart size={14} className="text-red-400 fill-red-400" />
-            Next.js + Tailwind
+            Aogolo
           </p>
         </div>
       </div>
