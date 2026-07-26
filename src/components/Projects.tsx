@@ -3,7 +3,8 @@
 import { useI18n } from "@/lib/I18nContext";
 import AnimatedSection from "./AnimatedSection";
 import { Github } from "lucide-react";
-import Image from "next/image";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Projects() {
   const { t, dir } = useI18n();
@@ -28,11 +29,9 @@ export default function Projects() {
             <div className="glass rounded-2xl p-6 glow-card h-full flex flex-col">
               <div className="w-full h-40 rounded-xl overflow-hidden bg-gradient-to-br from-primary-400/20 to-purple-400/20 dark:from-primary-500/10 dark:to-purple-500/10 mb-5 flex items-center justify-center">
                 {project.image ? (
-                  <Image
-                    src={project.image}
+                  <img
+                    src={basePath ? `${basePath}${project.image}` : project.image}
                     alt={project.title}
-                    width={400}
-                    height={200}
                     className="w-full h-full object-cover"
                   />
                 ) : (

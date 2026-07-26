@@ -31,6 +31,7 @@ const skillCategories = [
       "Go",
       "RESTful APIs",
       "WebSockets",
+      "NPM",
     ],
   },
   {
