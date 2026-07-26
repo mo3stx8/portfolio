@@ -2,36 +2,34 @@
 
 import { useI18n } from "@/lib/I18nContext";
 import AnimatedSection from "./AnimatedSection";
-import {
-  Code,
-  Server,
-  Database,
-  GitBranch,
-  Terminal,
-  Globe,
-  Layers,
-  Cpu,
-} from "lucide-react";
+import { Code, Server, Database, Terminal, Smartphone } from "lucide-react";
 
 const skillCategories = [
   {
     key: "frontend",
     icon: Code,
     skills: [
-      "React / Next.js",
+      "HTML5 / CSS3",
+      "JavaScript (ES6+)",
       "TypeScript",
+      "React",
+      "Next.js",
+      "Vue.js",
       "Tailwind CSS",
-      "HTML / CSS",
-      "Redux / Zustand",
+      "Bootstrap",
+      "jQuery",
+      "Blade"
     ],
   },
   {
     key: "backend",
     icon: Server,
     skills: [
-      "Node.js / Express",
-      "Python / Django",
-      "REST / GraphQL",
+      "PHP",
+      "Laravel",
+      "Node.js",
+      "Go",
+      "RESTful APIs",
       "WebSockets",
     ],
   },
@@ -39,10 +37,11 @@ const skillCategories = [
     key: "database",
     icon: Database,
     skills: [
-      "PostgreSQL",
-      "MongoDB",
-      "Redis",
-      "Prisma / TypeORM",
+      "MySQL",
+      "SQL Server",
+      "Firebase",
+      "Supabase",
+      "Eloquent ORM",
     ],
   },
   {
@@ -51,9 +50,20 @@ const skillCategories = [
     skills: [
       "Git / GitHub",
       "Docker",
+      "Vercel",
+      "Nginx / Apache",
+      "Linux / Bash",
       "CI/CD",
-      "AWS / Vercel",
-      "Linux",
+      "WordPress",
+    ],
+  },
+  {
+    key: "mobile",
+    icon: Smartphone,
+    skills: [
+      "Flutter",
+      "Dart",
+      "Responsive Design",
     ],
   },
 ];
@@ -68,7 +78,7 @@ export default function Skills() {
         <h2 className="section-title">{t("skills.title")}</h2>
       </AnimatedSection>
 
-      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {skillCategories.map((cat, i) => (
           <AnimatedSection key={cat.key} delay={0.1 * i}>
             <div className="glass rounded-2xl p-6 h-full glow-card">

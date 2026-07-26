@@ -40,7 +40,8 @@ export default function Header() {
             onClick={() => scrollTo("home")}
             className="text-xl font-bold text-gradient"
           >
-            MA<span className="text-slate-400 dark:text-slate-600">.</span>
+            Mostafa Ameen
+            <span className="text-slate-400 dark:text-slate-600"> . Aogolo</span>
           </button>
 
           <nav

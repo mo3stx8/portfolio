@@ -2,7 +2,8 @@
 
 import { useI18n } from "@/lib/I18nContext";
 import AnimatedSection from "./AnimatedSection";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
+import Image from "next/image";
 
 export default function Projects() {
   const { t, dir } = useI18n();
@@ -10,6 +11,8 @@ export default function Projects() {
     title: string;
     description: string;
     tech: string[];
+    link: string;
+    image?: string;
   }[];
 
   return (
@@ -23,10 +26,20 @@ export default function Projects() {
         {projects.map((project, i) => (
           <AnimatedSection key={i} delay={0.1 * i}>
             <div className="glass rounded-2xl p-6 glow-card h-full flex flex-col">
-              <div className="w-full h-40 rounded-xl bg-gradient-to-br from-primary-400/20 to-purple-400/20 dark:from-primary-500/10 dark:to-purple-500/10 mb-5 flex items-center justify-center">
-                <span className="text-4xl font-bold text-primary-300 dark:text-primary-600">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+              <div className="w-full h-40 rounded-xl overflow-hidden bg-gradient-to-br from-primary-400/20 to-purple-400/20 dark:from-primary-500/10 dark:to-purple-500/10 mb-5 flex items-center justify-center">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={200}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-4xl font-bold text-primary-300 dark:text-primary-600">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                )}
               </div>
 
               <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
@@ -52,14 +65,15 @@ export default function Projects() {
                   dir === "rtl" ? "flex-row-reverse" : ""
                 }`}
               >
-                <button className="flex items-center gap-1.5 text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
-                  <ExternalLink size={14} />
-                  {t("projects.viewProject")}
-                </button>
-                <button className="flex items-center gap-1.5 text-sm font-medium text-slate-500 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                >
                   <Github size={14} />
                   {t("projects.viewCode")}
-                </button>
+                </a>
               </div>
             </div>
           </AnimatedSection>

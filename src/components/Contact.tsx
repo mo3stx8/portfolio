@@ -2,7 +2,7 @@
 
 import { useI18n } from "@/lib/I18nContext";
 import AnimatedSection from "./AnimatedSection";
-import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Phone } from "lucide-react";
 
 export default function Contact() {
   const { t, dir } = useI18n();
@@ -13,11 +13,6 @@ export default function Contact() {
       icon: Linkedin,
       href: "https://linkedin.com/in/mostafa-al-zubairi",
       label: "LinkedIn",
-    },
-    {
-      icon: Twitter,
-      href: "https://twitter.com/mo3stx7",
-      label: "Twitter",
     },
   ];
 
@@ -65,6 +60,24 @@ export default function Contact() {
                   }`}
                 >
                   <div className="p-3 rounded-xl bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 flex-shrink-0">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500 dark:text-slate-500">
+                      {t("contact.phone")}
+                    </p>
+                    <p className="text-slate-800 dark:text-slate-200 font-semibold" dir="ltr">
+                      +967 774 316 974
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`flex items-start gap-4 ${
+                    dir === "rtl" ? "flex-row-reverse" : ""
+                  }`}
+                >
+                  <div className="p-3 rounded-xl bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 flex-shrink-0">
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -72,7 +85,7 @@ export default function Contact() {
                       {t("contact.location")}
                     </p>
                     <p className="text-slate-800 dark:text-slate-200 font-semibold">
-                      Yemen
+                      Hadramout, Yemen
                     </p>
                   </div>
                 </div>

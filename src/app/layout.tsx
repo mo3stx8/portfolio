@@ -3,9 +3,9 @@ import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mostafa Ameen | Full-Stack Developer",
+  title: "Mostafa Ameen | Full-Stack Developer — Laravel & React",
   description:
-    "Portfolio of Mostafa Ameen — Full-Stack Developer specializing in modern web applications",
+    "Full-Stack Web Developer specializing in Laravel, PHP, React, and MySQL. Building responsive, database-driven web applications.",
   icons: { icon: "/favicon.svg" },
 };
 
